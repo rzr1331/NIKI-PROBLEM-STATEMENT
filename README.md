@@ -3,7 +3,7 @@ Identify Question Type: Given a question, the aim is to identify the category it
 
 For Basic Requirements Installation :
 ```
-$ pip install -r Requirements.txt
+pip install -r Requirements.txt
 ```
 
 To run the app
