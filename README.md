@@ -6,7 +6,7 @@ For Basic Requirements Installation :
 pip install -r Requirements.txt
 ```
 
-To run the app
+To run the app :
 ```
 python app.py
 ```
