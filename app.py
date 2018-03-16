@@ -3,7 +3,6 @@
 # Importing the libraries
 import numpy as np
 import pandas as pd
-import re
 import warnings
 from sklearn.feature_extraction.text import CountVectorizer
 from datahandler import DataHandler
@@ -21,6 +20,7 @@ y = labelencoder_y.fit_transform(y)
 corpus = []
 cleaner = DataHandler(dataset.iloc[:,0])
 #print(cleaner.__dict__)
+#corpus = cleaner.cleanLemmatizer()
 corpus = cleaner.cleanStemmer()
     
 # Creating the Bag of Words model
@@ -29,7 +29,7 @@ X = cv.fit_transform(corpus).toarray()
 
 ##############################################################
 # Training the model
-print("Training the model with train:test :: 80:20")
+print("Training the model with train_set=80% & test_set=20%")
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split

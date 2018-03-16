@@ -18,6 +18,5 @@ class LR :
     def accuracy(self, y_test, y_pred) :
         # Making the Confusion Matrix & calculating Accuracy
         cm = confusion_matrix(y_test, y_pred)
-        accuracy = np.trace(cm)/np.sum(cm)
+        accuracy = sum(np.diag(cm))/np.sum(cm)
         return accuracy*100
-   
